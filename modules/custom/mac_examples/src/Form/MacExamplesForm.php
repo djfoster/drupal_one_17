@@ -23,12 +23,12 @@ class MacExamplesForm extends FormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $form['caja_de_texto_1'] = array(
       '#type' => 'textfield',
-      '#title' => 'Caja de texto 1',
+      '#title' => 'Caja de texto ',
     );
     
     $form['area_de_texto_1'] = array(
       '#type' => 'textarea',
-      '#title' => 'Area de texto 1',
+      '#title' => 'Area de texto ',
     );
     
     $form['checkbox_1'] = array(
@@ -43,7 +43,7 @@ class MacExamplesForm extends FormBase {
     
     $form['fecha_1'] = array(
       '#type' => 'date',
-      '#title' => 'Fecha 1',
+      '#title' => 'Fecha ',
     );
     
     $form['email_1'] = array(
@@ -60,7 +60,7 @@ class MacExamplesForm extends FormBase {
     
     $form['actions']['submit'] = array(
       '#type' => 'submit',
-      '#value' => 'Enviar',
+      '#value' => 'submit',
     );
     
     return $form;
@@ -77,15 +77,15 @@ class MacExamplesForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    drupal_set_message('Caja de texto 1: ' . $form_state->getValue('caja_de_texto_1'), 'status');
+    drupal_set_message('Caja de texto : ' . $form_state->getValue('caja_de_texto'), 'status');
     
-    drupal_set_message('Area de texto 1: ' . $form_state->getValue('area_de_texto_1'), 'status');
+    drupal_set_message('Area de texto : ' . $form_state->getValue('area_de_texto'), 'status');
     
     drupal_set_message('Marca esta opción: ' . $form_state->getValue('checkbox_1'), 'status');
     
     drupal_set_message('Elije un color: ' . $form_state->getValue('color_1'), 'status');
     
-    drupal_set_message('Fecha 1: ' . $form_state->getValue('fecha_1'), 'status');
+    drupal_set_message('Fecha : ' . $form_state->getValue('fecha'), 'status');
     
     drupal_set_message('Ingresa correo electrónico: ' . $form_state->getValue('email_1'), 'status');
     
