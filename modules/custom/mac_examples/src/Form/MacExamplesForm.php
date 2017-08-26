@@ -23,13 +23,13 @@ class MacExamplesForm extends FormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $form['caja_de_texto_1'] = array(
       '#type' => 'textfield',
-      '#title' => 'Caja de texto ',
+      '#title' => 'Inserta tu nombre aqui ',
       '#required' => TRUE
     );
     
     $form['area_de_texto_1'] = array(
       '#type' => 'textarea',
-      '#title' => 'Area de texto ',
+      '#title' => 'Danos tu Opinion Aqui ',
       '#resizable' => 'none',
     );
     
@@ -46,18 +46,18 @@ class MacExamplesForm extends FormBase {
     
     $form['fecha_1'] = array(
       '#type' => 'date',
-      '#title' => 'Fecha ',
+      '#title' => 'DateTime ',
     );
     
     $form['email_1'] = array(
       '#type' => 'email',
-      '#title' => 'Ingresa correo electrónico',
+      '#title' => 'Ingresa tu correo electrónico',
       '#required' => TRUE
     );
     
     $form['numero_1'] = array(
       '#type' => 'number',
-      '#title' => 'Ingresa un número',
+      '#title' => 'Ingresa un número que desees',
     );
     
     $form['actions']['#type'] = 'actions';
@@ -81,19 +81,19 @@ class MacExamplesForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    drupal_set_message('Caja de texto : ' . $form_state->getValue('caja_de_texto'), 'status');
+    drupal_set_message('Inserta tu nombre aqui : ' . $form_state->getValue('Inserta_tu_nombre_aqui'), 'status');
     
-    drupal_set_message('Area de texto : ' . $form_state->getValue('area_de_texto'), 'status');
+    drupal_set_message('Danos tu Opinion Aqui : ' . $form_state->getValue('Danos_tu_Opinio_Aqui'), 'status');
     
     drupal_set_message('Marca esta opción: ' . $form_state->getValue('checkbox_1'), 'status');
     
     drupal_set_message('Elije un color: ' . $form_state->getValue('color_1'), 'status');
     
-    drupal_set_message('Fecha : ' . $form_state->getValue('fecha'), 'status');
+    drupal_set_message('DateTime : ' . $form_state->getValue('DateTime'), 'status');
     
-    drupal_set_message('Ingresa correo electrónico: ' . $form_state->getValue('email_1'), 'status');
+    drupal_set_message('Ingresa tu correo electrónico: ' . $form_state->getValue('email_1'), 'status');
     
-    drupal_set_message('Ingresa un número: ' . $form_state->getValue('numero_1'), 'status');
+    drupal_set_message('Ingresa un número que desees: ' . $form_state->getValue('numero_1'), 'status');
   }
   
 }
