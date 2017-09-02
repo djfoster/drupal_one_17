@@ -37,3 +37,7 @@ float: left;
 margin-left: 15px;
 margin-right: 0;
 }
+/* BACKGROUND TEXTURE */
+body {
+background-image: url('../images/page-bg.png');
+}
