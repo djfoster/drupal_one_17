@@ -41,3 +41,10 @@ margin-right: 0;
 body {
 background-image: url('../images/page-bg.png');
 }
+/* MODIFIED MENU */
+.block-menu ul.menu li {
+border-right: 1px solid #8199ff;
+}
+.block-menu ul.menu li:last-child {
+border: none;
+}
